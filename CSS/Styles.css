@@ -2,7 +2,7 @@
 	.navbar {
         background-color: #CCCCCC;
         overflow: hidden;
-        margin: auto;
+        width: 100%;
       }
       /* Style the links inside the navigation bar */
       .navbar a {
