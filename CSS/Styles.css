@@ -1,4 +1,14 @@
-    /* Add a black background color to the top navigation */
+/*
+
+references for the website:
+
+references for tables:
+    o https://www.w3schools.com/html/html_tables.asp
+
+
+    
+*/
+/* Add a black background color to the top navigation */
 	.navbar {
         background-color: #CCCCCC;
         overflow: hidden;
@@ -16,3 +26,5 @@
       h2 {
          text-align: center;
       }
+
+      
