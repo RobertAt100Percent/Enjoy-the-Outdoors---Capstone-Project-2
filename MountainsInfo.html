@@ -22,84 +22,41 @@
   <div>
     <br>
 
+    <article>
+
     <form action="#">
-      <input type="radio" id="rdMountainLocation">
-      <label for="">By Location</label>
-
-      <input type="radio" id="rdMountainType">
-      <label for="">By by Type</label>        
-
-      <br><br>
-
       <h3>
         States/Terrtories 
       </h3>      
 
       <!-- drop down-->
-      <label for="cars">Choose a car:</label>
-      <select name="cars" id="cars">
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="opel">Opel</option>
-        <option value="audi">Audi</option>
-      </select>
+      <label for="cars"></label>
+
+      <select name="categories" id="category-list" 
+      onchange="handleCategoryChanged();"
+    ></select>
+
     </form><!-- end of the form -->
 
     *display information/description of what the user selected
 
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip</th>
+            <th>Phone</th>
+            <th>Website</th>
+          </tr>
+        </thead>
+        <tbody id="activities-tbl-body"></tbody>
+      </table>
+    </article>
 
-    <table>
-      <tr>
-        <th>Name</th>
-        <th>Address</th>
-        <th>City</th>
-        <th>State</th>
-        <th>Zip</th>
-        <th>Phone</th>
-        <th>Website</th>
-      </tr>
-      <tr>
-        <td>**Mountain Name</td>
-        <td>**Mountain Address</td>
-        <td>**Mountain City</td>
-        <td>**Mountain State</td>
-        <td>Mountain Zip</td>
-        <td>Mountain Phone #</td>
-        <td>Mountain Webpage</td>        
-      </tr>
-      <tr>
-        <td>example text</td>
-        <td>example text</td>
-        <td>example text</td>
-        <td>example text</td>
-        <td>example text</td>
-        <td>example text</td>
-        <td>example text</td>
-      </tr>
-      <tr>
-        <td>Ernst Handel</td>
-        <td>Roland Mendel</td>
-        <td>Austria</td>
-      </tr>
-      <tr>
-        <td>Island Trading</td>
-        <td>Helen Bennett</td>
-        <td>UK</td>
-      </tr>
-      <tr>
-        <td>Laughing Bacchus Winecellars</td>
-        <td>Yoshi Tannamuri</td>
-        <td>Canada</td>
-      </tr>
-      <tr>
-        <td>Magazzini Alimentari Riuniti</td>
-        <td>Giovanni Rovelli</td>
-        <td>Italy</td>
-      </tr>
-    </table>
-    
-
-  </div>
+  </div> 
   <!-- JavaScript(s)-->
     <script src="scripts/mountainData.js"></script>
     <script src="scripts/mountains.js"></script>

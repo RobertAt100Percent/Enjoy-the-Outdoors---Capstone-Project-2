@@ -13,18 +13,68 @@
     <link rel="stylesheet" href="CSS/Styles.css">
 </head>
 <body>
-   <div class="navbar">
-	  <a class="active" href="index.html">Home</a>
-	  <a href="MountainsInfo.html">Mountains</a>
-	  <a href="NationalParks.html">Parks</a>
-	</div>
+  <div class="navbar">
+   <a class="active" href="index.html">Home</a>
+   <a href="MountainsInfo.html">Mountains</a>
+   <a href="NationalParks.html">Parks</a>
+ </div>
+   
+ <div>
+   <br>
+    <input type="radio" name="ex" id="rd1">
+    <label for="">By Location</label>
+    <input type="radio" name="ex" id="rd2">
+    <label for="">By Type</label>
+   <article>
+
+
+   <form action="#">
+    <!-- the radio buttons have the same names and different id's because when radio buttons have the same name only one can be selected. We'll use the Id given to the radios to switch between cards (Location and Type)-->
+
+     <h3>
+       Park 
+     </h3>      
+
+     <!-- drop down-->
+     <label for="cars">Choose a Location :</label>
+
+     <select name="locations" id="location-list" 
+     onchange="handleLocationChanged();"
+   ></select>
+
+   </form><!-- end of the form -->
+
+   *display information/description of what the user selected
+
+     <table>
+       <thead>
+         <tr>
+           <th>Name</th>
+           <th>Address</th>
+           <th>City</th>
+           <th>State</th>
+           <th>Zip</th>
+           <th>Phone</th>
+           <th>Website</th>
+         </tr>
+       </thead>
+       <tbody id="parks-tbl-body"></tbody>
+     </table>
+   
+     </article>
+
+ </div> 
 
 
   <!-- JavaScript(s)-->
-      <script src="scripts/locationData.js"></script>
-    <script src="scripts/parkTypeData.js"></script>
+    <script src="scripts/locationData.js"></script>
     <script src="scripts/nationalParkData.js"></script>
-
+    <script src="scripts/parkTypeData.js"></script>
     <script src="scripts/national-parks.js"></script>
+<script>
+  if (document.getElementById("rd1").check) {
+    
+  }
+</script>
   </body>
 </html>

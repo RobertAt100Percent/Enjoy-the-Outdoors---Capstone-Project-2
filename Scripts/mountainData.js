@@ -527,4 +527,66 @@ const mountainsArray = [
             lng: -71.556745
         }
     }
-]
+]//end of array
+
+
+
+const categoryList = document.querySelector("#category-list");
+      const activitiesTableBody = document.querySelector(
+        "#activities-tbl-body"
+      );
+
+      function loadLocationList() {
+        let option = new Option("Select Category...", "");
+        categoryList.appendChild(option);
+
+        for (const category of categories) {
+          let option = document.createElement("option");
+          option.value = category;
+          option.innerText = category;
+          categoryList.appendChild(option);
+        }
+      }
+      loadLocationList();
+
+      function buildActivityRow(tbody, activity) {
+        let row = tbody.insertRow(-1);
+
+        let cell1 = row.insertCell(0);
+        cell1.innerText = activity.name;
+
+        let cell2 = row.insertCell(1);
+        cell2.innerText = activity.elevation;
+
+        let cell3 = row.insertCell(2);
+        cell3.innerText = activity.effort;
+
+        let cell4 = row.insertCell(3);
+        cell3.innerText = activity.img;
+
+        let cell5 = row.insertCell(4);
+        cell3.innerText = activity.desc;        
+
+        let cell6 = row.insertCell(5);
+        cell3.innerText = activity.lat;
+
+        let cell7 = row.insertCell(6);
+        cell3.innerText = activity.lng;    
+
+      }
+
+      function loadActivitiesTable(category) {
+        activitiesTableBody.innerHTML = "";
+        const filteredActivities = activities.filter(
+          (activity) => activity.category == category
+        );
+        for (const activity of filteredActivities) {
+          buildActivityRow(activitiesTableBody, activity);
+        }
+      }
+
+      function handleCategoryChanged() {
+        const category = categoryList.value;
+        loadActivitiesTable(category);
+      }
+
