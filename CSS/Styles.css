@@ -27,4 +27,16 @@ references for tables:
          text-align: center;
       }
 
-      
+
+/*   
+
+@media screen and (max-width: 991px) {
+  body {
+    background-color: lightgreen;
+  }
+
+  .noShow{
+  display: none;
+}   
+}
+*/

@@ -1,17 +1,21 @@
-const locationList = document.querySelector("#location-list");
-const parksTableBody = document.querySelector(
-  "#parks-tbl-body"
-);
+//functions for the Parks page
+//funtiocns and variables for the Park Card
+
+//declare and initialize all needed variables 
+const locationList = document.querySelector("#location-list");//assign the select tag (which is the dropdown) to this variable. make it constant so it dosent change
+const parksTableBody = document.querySelector("#parks-tbl-body");//assign the table body and make it constant so we can add and take away information without changing what the variable is assigned to 
 
 function loadLocationList() {
-  let option = new Option("Select Location...", "");
-  locationList.appendChild(option);
+  let option = new Option("Select Location...", "");//this just make a new/ default option in the dropdown
+  locationList.appendChild(option);//this will actually add the option variable to the drop down
 
+  //use a for loop to go though the array and display it in the dropdown (selector tag)
+  //location is a local variable that will be used to travers though the whole array. this is lilterally like the for loop in java but we have to make our own local variable, has no declared data type and 
   for (const location of locationsArray) {
-    let option = document.createElement("option");
-    option.value = location;
-    option.innerText = location;
-    locationList.appendChild(option);
+    let option = document.createElement("option");//make a new option to select
+    option.value = location;//set the value of the option. value gets
+    option.innerText = location;//set the text of the option 
+    locationList.appendChild(option);//this is how we add options to the list dynamially. by using the appendchild method, keeping the previous options and adding the new ones from the array
   }
 }
 loadLocationList();
@@ -48,8 +52,7 @@ function buildParkRow(tbody, park) {
 
   if (park.Visit) {
   cell7.innerText = park.Visit;
-  }
-  
+  } 
 }
 
 function loadParksTable(location) {
@@ -66,4 +69,6 @@ function handleLocationChanged() {
   const location = locationList.value;
   loadParksTable(location);
 }
+
+//functions for the States/Territories
 
