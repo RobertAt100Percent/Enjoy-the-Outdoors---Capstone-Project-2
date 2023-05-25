@@ -113,5 +113,21 @@ function handleParksLocationChanged() {
   loadParksTable(location);
 }//end of array
 
-//functions for the States/Territories
+//display different drop downs
 
+function displayTable(parksDropDown) {
+  // let parksDropDown = document.querySelector('input[name="ex"]:checked').value;
+ let displayTerritories = document.getElementById("TerritoriesArticle");
+ let displayParks = document.getElementById("ParksArticle");
+
+if (parksDropDown == 1) {
+ displayTerritories.style.display = "block";
+ displayParks.style.display = "none";
+
+} 
+if (parksDropDown == 2){
+  displayParks.style.display = "block";
+  displayTerritories.style.display = "none";
+
+}
+}

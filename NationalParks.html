@@ -21,14 +21,14 @@
    <!--main class="noShow"-->
 
    <br>
-   <input type="radio" name="ex" id="rd1">
-   <label for="">By Location</label>
-   <input type="radio" name="ex" id="rd2">
-   <label for="">By Type</label>
+   <input type="radio" name="ex" id="rd1" value="1" onchange="displayTable(value)">
+   <label for="rd1">By Location</label>
+   <input type="radio" name="ex" id="rd2" value="2" onchange="displayTable(value)">
+   <label for="rd2">By Type</label>
 
    <div id="TerritoriesTypeDiv">
 
-  <article>
+  <article id="TerritoriesArticle">
 
 
   <form action="#">
@@ -66,15 +66,10 @@
 
 </div> 
 
-
-  <hr>
-
     <!-- second card -->
-      <br>
-
        <div id="LocationTypeDiv">
 
-      <article><!-- -->
+        <article id="ParksArticle" style="display: none;">
    
    
       <form action="#">
