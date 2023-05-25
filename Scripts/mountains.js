@@ -27,7 +27,11 @@ function buildMountainsRow(tbody, mountain) {
     let row = tbody.insertRow(-1);
   
     let cell1 = row.insertCell(0);
-    cell1.innerText = mountain.img;
+    let img = document.createElement('img');
+    img.src = `./Images/${mountain.img}`;
+    img.width = 335;
+    img.height = 220;
+    cell1.appendChild(img);
   
     let cell2 = row.insertCell(1);
     cell2.innerText = mountain.name;
