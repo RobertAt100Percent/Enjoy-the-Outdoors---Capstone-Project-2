@@ -2,14 +2,14 @@
 //funtiocns and variables for the Park Card
 
 //declare and initialize all needed variables 
-const locationList = document.querySelector("#Territories-location-list");//assign the select tag (which is the dropdown) to this variable. make it constant so it dosent change
+const mountainList = document.querySelector("#Territories-location-list");//assign the select tag (which is the dropdown) to this variable. make it constant so it dosent change
 const TerritoriesTableBody = document.querySelector("#Territories-tbl-body");//assign the table body and make it constant so we can add and take away information without changing what the variable is assigned to 
 const ParksTableBody = document.querySelector("#parks-tbl-body");
 const parkLocationList = document.querySelector("#parks-location-list");
 
 function loadLocationList() {
   let option = new Option("Select Location...", "");//this just make a new/ default option in the dropdown
-  locationList.appendChild(option);//this will actually add the option variable to the drop down
+  mountainList.appendChild(option);//this will actually add the option variable to the drop down
 
   //these are the location for the terriorties
   //use a for loop to go though the array and display it in the dropdown (selector tag)
@@ -18,7 +18,7 @@ function loadLocationList() {
     let option = document.createElement("option");//make a new option to select
     option.value = location;//set the value of the option. value gets
     option.innerText = location;//set the text of the option 
-    locationList.appendChild(option);//this is how we add options to the list dynamially. by using the appendchild method, keeping the previous options and adding the new ones from the array
+    mountainList.appendChild(option);//this is how we add options to the list dynamially. by using the appendchild method, keeping the previous options and adding the new ones from the array
   }
 }
 
@@ -103,7 +103,7 @@ function loadParksTable(location) {
 
 //change the showed location at the change of the selected option in the drop down
 function handleLocationChanged() {
-  const location = locationList.value;
+  const location = mountainList.value;
   loadTerritoriesTable(location);
 }//end of array
 
