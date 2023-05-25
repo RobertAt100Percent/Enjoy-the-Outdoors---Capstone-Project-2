@@ -20,62 +20,57 @@
  </div>
    <!--main class="noShow"-->
 
+   <br>
+   <input type="radio" name="ex" id="rd1">
+   <label for="">By Location</label>
+   <input type="radio" name="ex" id="rd2">
+   <label for="">By Type</label>
+
+   <div id="TerritoriesTypeDiv">
+
+  <article>
+
+
+  <form action="#">
+   <!-- the radio buttons have the same names and different id's because when radio buttons have the same name only one can be selected. We'll use the Id given to the radios to switch between cards (Location and Type)-->
+
+    <h3>
+      States/Territories 
+    </h3>      
+
+    <!-- drop down-->
+    <label for="">Choose a Location :</label>
+
+    <select name="locations" id="Territories-location-list" 
+    onchange="handleLocationChanged();"
+  ></select>
+
+  </form><!-- end of the form -->
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Address</th>
+          <th>City</th>
+          <th>State</th>
+          <th>Zip</th>
+          <th>Phone</th>
+          <th>Website</th>
+        </tr>
+      </thead>
+      <tbody id="Territories-tbl-body"></tbody>
+    </table>
+  
+    </article>
+
+</div> 
+
+
+  <hr>
+
+    <!-- second card -->
       <br>
-       <input type="radio" name="ex" id="rd1">
-       <label for="">By Location</label>
-       <input type="radio" name="ex" id="rd2">
-       <label for="">By Type</label>
-
-       <div id="ParkTypeDiv">
-
-      <article><!-- -->
-   
-   
-      <form action="#">
-       <!-- the radio buttons have the same names and different id's because when radio buttons have the same name only one can be selected. We'll use the Id given to the radios to switch between cards (Location and Type)-->
-   
-        <h3>
-          Park Type
-        </h3>      
-   
-        <!-- drop down-->
-        <label for="cars">Choose a Location :</label>
-   
-        <select name="locations" id="location-list" 
-        onchange="handleLocationChanged();"
-      ></select>
-   
-      </form><!-- end of the form -->
-   
-      *display information/description of what the user selected
-   
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Address</th>
-              <th>City</th>
-              <th>State</th>
-              <th>Zip</th>
-              <th>Phone</th>
-              <th>Website</th>
-            </tr>
-          </thead>
-          <tbody id="parks-tbl-body"></tbody>
-        </table>
-      
-        </article>
-   
-    </div> 
-   
-   
-
-    <hr>
-      <br>
-       <input type="radio" name="ex" id="rd1">
-       <label for="">By Location</label>
-       <input type="radio" name="ex" id="rd2">
-       <label for="">By Type</label>
 
        <div id="LocationTypeDiv">
 
@@ -86,20 +81,18 @@
        <!-- the radio buttons have the same names and different id's because when radio buttons have the same name only one can be selected. We'll use the Id given to the radios to switch between cards (Location and Type)-->
    
         <h3>
-          States/Territories 
+        Park Type
         </h3>      
-   
+
         <!-- drop down-->
-        <label for="cars">Choose a Location :</label>
+        <label for="">Choose a Location :</label>
    
-        <select name="locations" id="location-list" 
-        onchange="handleLocationChanged();"
+        <select name="ParkLocations" id="parks-location-list" 
+        onchange="handleParksLocationChanged();"
       ></select>
    
       </form><!-- end of the form -->
-   
-      *display information/description of what the user selected
-   
+      
         <table>
           <thead>
             <tr>
