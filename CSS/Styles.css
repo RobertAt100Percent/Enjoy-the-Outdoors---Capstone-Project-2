@@ -60,3 +60,11 @@ th, td {
 }
 
 tr:nth-child(even) {background-color: #f2f2f2;}
+
+.breakWords{
+  word-break: break-word;
+}
+
+#forAllTables{
+  width: 100%;
+}

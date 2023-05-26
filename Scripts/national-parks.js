@@ -71,13 +71,23 @@ function buildTerritoriesRow(tbody, Territories) {
   //we can just put the variable in the condition to check if the statement if ture or false
   if (Territories.Phone) {
       cell6.innerText = Territories.Phone;
+  }else{
+    cell6.innerText = "no number";
+
   }
 
 
   let cell7 = row.insertCell(6);
 
   if (Territories.Visit) {
-  cell7.innerText = Territories.Visit;
+  // cell7.innerText = Territories.Visit;
+
+  let aTag = document.createElement('a');
+    aTag.innerHTML=Territories.Visit;
+    aTag.href= Territories.Visit;
+    aTag.title="visit website";
+    cell7.appendChild(aTag);
+
   }else{
     cell7.innerText = "no website";
   }
