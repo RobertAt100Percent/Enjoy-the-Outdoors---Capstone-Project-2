@@ -9,7 +9,7 @@ references for tables:
     
 */
 
-body{
+#BGindex{
   background-image: url(https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?cs=srgb&dl=pexels-bri-schneiter-346529.jpg&fm=jpg);
 
   height:100vh;
@@ -19,6 +19,27 @@ body{
   background-size: cover;
   background-attachment: fixed;              /* optional, center the image */
 }
+#BGparks{
+  background-image: url(https://wallpaper.dog/large/10736177.jpg);
+
+  height:100vh;
+  width: 100%;
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;              /* optional, center the image */
+}
+#BGmountains{
+  background-image: url(https://wallpapercave.com/wp/wp6294643.jpg);
+
+  height:100vh;
+  width: 100%;
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;              /* optional, center the image */
+}
+
 /* Add a black background color to the top navigation */
 	.navbar {
         background-color: #CCCCCC;
@@ -56,7 +77,7 @@ body{
 
 th, td {
   text-align: left;
-  padding: 8px;
+  /* padding: 8px; */
 }
 
 tr:nth-child(even) {background-color: #f2f2f2;}
@@ -67,4 +88,16 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 
 #forAllTables{
   width: 100%;
+}
+
+.MountainColor{
+  background-color: rgba(240, 248, 255, 0.66);
+}
+
+ .IndexColor{
+  background-color: rgba(240, 255, 249, 0.574);
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 30px;
 }
