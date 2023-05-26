@@ -8,6 +8,17 @@ references for tables:
 
     
 */
+
+body{
+  background-image: url(https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?cs=srgb&dl=pexels-bri-schneiter-346529.jpg&fm=jpg);
+
+  height:100vh;
+  width: 100%;
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;              /* optional, center the image */
+}
 /* Add a black background color to the top navigation */
 	.navbar {
         background-color: #CCCCCC;
@@ -32,3 +43,13 @@ references for tables:
   .noShow{
   display: none;
 */
+
+#goLeft{
+  text-align: left;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}

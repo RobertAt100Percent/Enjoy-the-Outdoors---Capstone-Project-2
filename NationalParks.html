@@ -5,110 +5,131 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>National Parks</title>
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.classless.min.css"
-  />
+<!-- Bootstrap CSS-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <link rel="stylesheet" href="CSS/Styles.css">
 </head>
 <body>
-  <div class="navbar">
-   <a class="active" href="index.html">Home</a>
-   <a href="MountainsInfo.html">Mountains</a>
-   <a href="NationalParks.html">Parks</a>
- </div>
-   <!--main class="noShow"-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link active" href="MountainsInfo.html">Mountains<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="NationalParks.html">NationalParks</a>
+        </li>            
+      </ul>
+    </div>
+  </nav>
 
-   <br>
-   <input type="radio" name="ex" id="rd1" value="1" onchange="displayTable(value)">
-   <label for="rd1">By Location</label>
-   <input type="radio" name="ex" id="rd2" value="2" onchange="displayTable(value)">
-   <label for="rd2">By Type</label>
-
-   <div id="TerritoriesTypeDiv">
-
-  <article id="TerritoriesArticle">
-
-
-  <form action="#">
-   <!-- the radio buttons have the same names and different id's because when radio buttons have the same name only one can be selected. We'll use the Id given to the radios to switch between cards (Location and Type)-->
-
-    <h3>
-      States/Territories 
-    </h3>      
-
-    <!-- drop down-->
-    <label for="">Choose a Location :</label>
-
-    <select name="locations" id="Territories-location-list" 
-    onchange="handleLocationChanged();"
-  ></select>
-
-  </form><!-- end of the form -->
-
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Address</th>
-          <th>City</th>
-          <th>State</th>
-          <th>Zip</th>
-          <th>Phone</th>
-          <th>Website</th>
-        </tr>
-      </thead>
-      <tbody id="Territories-tbl-body"></tbody>
-    </table>
-  
-    </article>
-
-</div> 
-
-    <!-- second card -->
-       <div id="LocationTypeDiv">
-
-        <article id="ParksArticle" style="display: none;">
-   
-   
-      <form action="#">
-       <!-- the radio buttons have the same names and different id's because when radio buttons have the same name only one can be selected. We'll use the Id given to the radios to switch between cards (Location and Type)-->
-   
-        <h3>
-        Park Type
-        </h3>      
-
-        <!-- drop down-->
-        <label for="">Choose a Location :</label>
-   
-        <select name="ParkLocations" id="parks-location-list" 
-        onchange="handleParksLocationChanged();"
-      ></select>
-   
-      </form><!-- end of the form -->
-      
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Address</th>
-              <th>City</th>
-              <th>State</th>
-              <th>Zip</th>
-              <th>Phone</th>
-              <th>Website</th>
-            </tr>
-          </thead>
-          <tbody id="parks-tbl-body"></tbody>
-        </table>
-      
-        </article>
+   <main>
    
     </div> 
-   <!--/main-->
+
+    <div class="card">
+      <div class="card-body">
+        <input type="radio" name="ex" id="rd1" value="1" onchange="displayTable(value)">
+        <label for="rd1">By Location</label>
+        <input type="radio" name="ex" id="rd2" value="2" onchange="displayTable(value)">
+        <label for="rd2">By Type</label>
+     
+        <div id="TerritoriesTypeDiv">
+     
+       <article id="TerritoriesArticle">
+     
+     
+       <form action="#">
+        <!-- the radio buttons have the same names and different id's because when radio buttons have the same name only one can be selected. We'll use the Id given to the radios to switch between cards (Location and Type)-->
+     
+         <h3>
+           States/Territories 
+         </h3>      
+     
+         <!-- drop down-->
+         <label for="">Choose a Location :</label>
+     
+         <select name="locations" id="Territories-location-list" 
+         onchange="handleLocationChanged();"
+       ></select>
+     
+       </form><!-- end of the form -->
+     
+         <table>
+           <thead>
+             <tr>
+               <th>Name</th>
+               <th>Address</th>
+               <th>City</th>
+               <th>State</th>
+               <th>Zip</th>
+               <th>Phone</th>
+               <th>Website</th>
+             </tr>
+           </thead>
+           <tbody id="Territories-tbl-body"></tbody>
+         </table>
+       
+         </article>
+     
+     </div> 
+     
+         <!-- second card -->
+            <div id="LocationTypeDiv">
+     
+             <article id="ParksArticle" style="display: none;">
+        
+        
+           <form action="#">
+            <!-- the radio buttons have the same names and different id's because when radio buttons have the same name only one can be selected. We'll use the Id given to the radios to switch between cards (Location and Type)-->
+        
+             <h3>
+             Park Type
+             </h3>      
+     
+             <!-- drop down-->
+             <label for="">Choose a Location :</label>
+        
+             <select name="ParkLocations" id="parks-location-list" 
+             onchange="handleParksLocationChanged();"
+           ></select>
+        
+           </form><!-- end of the form -->
+           
+             <table>
+               <thead>
+                 <tr>
+                   <th>Name</th>
+                   <th>Address</th>
+                   <th>City</th>
+                   <th>State</th>
+                   <th>Zip</th>
+                   <th>Phone</th>
+                   <th>Website</th>
+                 </tr>
+               </thead>
+               <tbody id="parks-tbl-body"></tbody>
+             </table>
+           
+             </article>
+
+        This is some text within a card body.
+      </div>
+    </div>
+
+   </main>
 
   <!-- JavaScript(s)-->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
     <script src="scripts/locationData.js"></script>
     <script src="scripts/nationalParkData.js"></script>
     <script src="scripts/parkTypeData.js"></script>

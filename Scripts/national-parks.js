@@ -78,7 +78,9 @@ function buildTerritoriesRow(tbody, Territories) {
 
   if (Territories.Visit) {
   cell7.innerText = Territories.Visit;
-  } 
+  }else{
+    cell7.innerText = "no website";
+  }
 }//end of function
 
 function loadTerritoriesTable(location) {
