@@ -49,9 +49,8 @@ function buildMountainsRow(tbody, mountain) {
   
     //some parks do not have a phonenumber so if there is not a number make it apperar blank in the table
     //we can just put the variable in the condition to check if the statement if ture or false
-    if (mountain.Phone) {
-        cell6.innerText = mountain.Phone;
-    }
+    
+        cell6.innerText = getSunsetForMountain(mountain.coords);
   
   
     let cell7 = row.insertCell(6);
@@ -76,3 +75,11 @@ function handleMountainChanged() {
     const mountainName = mountainList.value;
     loadMountainsTable(mountainName);
   }//end of array
+
+  // function that can "fetch" the sunrise/sunset times
+async function getSunsetForMountain(lat, lng){
+  let response = await fetch(
+  `https://api.sunrise-sunset.org/json?lat=${lat}&lng=${lng}&date=today`);
+  let data = await response.json();
+  return data;
+  }
