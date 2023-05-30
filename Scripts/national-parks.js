@@ -50,21 +50,27 @@ loadParksLocationList();
 function buildTerritoriesRow(tbody, Territories) {
   let row = tbody.insertRow(-1);
 
+  // display the territories name
   let cell1 = row.insertCell(0);
   cell1.innerText = Territories.LocationName;
 
+    // display the territories address
   let cell2 = row.insertCell(1);
   cell2.innerText = Territories.Address;
 
+    // display the territories city
   let cell3 = row.insertCell(2);
   cell3.innerText = Territories.City;
 
+    // display the territories state
   let cell4 = row.insertCell(3);
   cell4.innerText = Territories.State;
 
+    // display the territories zipcode
   let cell5 = row.insertCell(4);
   cell5.innerText = Territories.ZipCode;
 
+    // display the territories phone number
   let cell6 = row.insertCell(5);
 
   //some parks do not have a phonenumber so if there is not a number make it apperar blank in the table
@@ -76,7 +82,7 @@ function buildTerritoriesRow(tbody, Territories) {
 
   }
 
-
+  // display the territories website
   let cell7 = row.insertCell(6);
 
   if (Territories.Visit) {

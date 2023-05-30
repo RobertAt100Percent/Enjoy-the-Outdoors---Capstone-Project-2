@@ -8,10 +8,10 @@ references for tables:
 
     
 */
-
+/* seprate id tags for different backgrounds in the body tag of each page */
 #BGindex{
   background-image: url(https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?cs=srgb&dl=pexels-bri-schneiter-346529.jpg&fm=jpg);
-
+/* view height and percentage are responsive units in html. making sure users on different devices can access our website easily */
   height:100vh;
   width: 100%;
   background-position:center;
@@ -55,20 +55,16 @@ references for tables:
         text-decoration: none;
         font-size: 20px;
       }
+      /* this will make the second largest header centered in the page */
       h2 {
          text-align: center;
       }
-
-
-/*   
-  .noShow{
-  display: none;
-*/
 
 #goLeft{
   text-align: left;
 }
 
+/* this is a class to center stuff */
 .center {
   text-align: center;
   margin: auto;
@@ -79,17 +75,20 @@ th, td {
   text-align: left;
   /* padding: 8px; */
 }
+/* the line below will make every even row in the table light blueish, gray */
+tr:nth-child(even) {background-color: #f2f2f2;} 
 
-tr:nth-child(even) {background-color: #f2f2f2;}
-
+/* this will break the words if any container so they stay inside the container */
 .breakWords{
   word-break: break-word;
 }
 
+/* this wil make the table take up 100% of the width in the container */
 #forAllTables{
   width: 100%;
 }
 
+/* this is the background for the div container */
 .MountainColor{
   background-color: rgba(240, 248, 255, 0.66);
 }
