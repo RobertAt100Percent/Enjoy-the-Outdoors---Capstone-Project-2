@@ -10,7 +10,7 @@ references for tables:
 */
 /* seprate id tags for different backgrounds in the body tag of each page */
 #BGindex{
-  background-image: url(https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?cs=srgb&dl=pexels-bri-schneiter-346529.jpg&fm=jpg);
+  background-image: url('../Images/BGindex.jpg');
 /* view height and percentage are responsive units in html. making sure users on different devices can access our website easily */
   height:100vh;
   width: 100%;
@@ -20,7 +20,7 @@ references for tables:
   background-attachment: fixed;              /* optional, center the image */
 }
 #BGparks{
-  background-image: url(https://wallpaper.dog/large/10736177.jpg);
+  background-image: url(../Images/BGparks.jpg);
 
   height:100vh;
   width: 100%;
@@ -30,7 +30,7 @@ references for tables:
   background-attachment: fixed;              /* optional, center the image */
 }
 #BGmountains{
-  background-image: url(https://wallpapercave.com/wp/wp6294643.jpg);
+  background-image: url(../Images/BGmountains.jpg);
 
   height:100vh;
   width: 100%;
