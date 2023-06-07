@@ -78,7 +78,7 @@ function buildTerritoriesRow(tbody, Territories) {
   if (Territories.Phone) {
       cell6.innerText = Territories.Phone;
   }else{
-    cell6.innerText = "no number";
+    cell6.innerText = "n/a";
 
   }
 
@@ -95,7 +95,7 @@ function buildTerritoriesRow(tbody, Territories) {
     cell7.appendChild(aTag);
 
   }else{
-    cell7.innerText = "no website";
+    cell7.innerText = "n/a";
   }
 }//end of function
 
